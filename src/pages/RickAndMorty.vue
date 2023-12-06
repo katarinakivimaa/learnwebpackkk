@@ -33,7 +33,7 @@
 import axios from 'axios';
 export default {
     created(){
-        this.getCharacters('https://rickandmortyapi.com/api/character');
+        this.getCharacters('https://rickandmortyapi.com/api/character?page=8');
     },
     mounted(){
         document.addEventListener('scroll', ()=> {

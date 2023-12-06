@@ -11,6 +11,25 @@ import { VueLoaderPlugin } from 'vue-loader';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const response = await fetch("https://rickandmortyapi.com/api/character?page=8");
+const data = await response.json();
+// let views = fs.readdirSync('./src/views', {withFileTypes: true});
+// views = views.filter(view => viewsisFile());
+// let htmlPlugins = [];
+// for(let view of views){
+//     htmlPlugins.push(new HtmlWebpackPlugin({
+//         filename: path.parse(view.name).name + 'html',
+//         template: './src/views/' + view.name,
+//         templateParameters: {
+//             fullname: 'Katarina Kivimaa',
+//             items: ['vorst', 'vodka', 'leib', 'margariin'],
+//             chars: data.results
+//         }
+//     }))
+// }
+
+
+
 export default {
     entry: './src/index.js',
     output: {
